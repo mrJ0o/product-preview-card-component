@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream-color: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  background-color: var(--cream-color);
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile First Design */
+
+/* Card body */
+.card {
+  width: 100%;
+  max-width: 375px;
+  background-color: var(--white-color);
+  border-radius: 15px;
+}
+
+
+/* Image */
+.img-wrapper {
+  height: 300px;
+  width: 100%;
+}
+
+.img-wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Content area */
+.content {
+  padding: 0 25px 20px;
+}
+
+.content h2 {
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--dark-grayish-blue);
+  margin: 10px 0;
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-family: 'Fraunces',serif;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.content p{
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+}
+
+/* Pricing */
+.pricing {
+  display: flex;
+  margin: 10px 0;
+}
+
+.low-price {
+  font-size: 2rem;
+  font-family: 'Fraunces',serif;
+  font-weight: 700;
+  margin-right: 20px;
+  color: var(--dark-cyan);
+}
+
+.start-price {
+  font-size: .9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  align-self: center;
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--dark-cyan);
+  border-radius: 5px;
+  padding: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--white-color);
+  text-align: center;
+  font-weight: 500;
+}
+
+.btn::before {
+  content: url("../images/icon-cart.svg");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.btn:hover, .btn:focus{
+  background-color: hsla(158, 74%, 13%, 0.863);
+  outline: 1px solid hsla(61, 62%, 68%, 0.719);
+}
+
+@media (min-width: 768px) {
+
+    .card {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-width: 700px;
+      height: 500px;
+    }
+
+    .img-wrapper {
+      flex: 1;
+      height: 100%;
+    }
+
+    .img-wrapper img{
+      border-radius: 10px 0px 0 10px;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .content h2 {
+      margin: 30px 0;
+    }
+}
